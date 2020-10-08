@@ -6,6 +6,7 @@
       <field name="inherit_id" ref="base.view_partner_form"/>
       <field name="arch" type="xml">
         <xpath expr="//group[@name='banks']" position="before">
+        <!--
           <h3>Facturas</h3>
           <field name="facturas">
             <tree>
@@ -16,6 +17,7 @@
               <field name="state"/>
             </tree>
           </field>
+          -->
         </xpath>
       </field>
     </record>

@@ -23,14 +23,16 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         #'views/views.xml',
         #'views/templates.xml',
-        'views/view_socio_acc.xml'
+        'views/view_socio_acc.xml',
+        'views/view_factura_cronograma.xml'
+
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        #'demo/demo.xml',
     ],
     'application': True,
 }

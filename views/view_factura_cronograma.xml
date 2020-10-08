@@ -1,0 +1,37 @@
+<odoo>
+  <data>
+    <record id="account_invoice_coop" model="ir.ui.view">
+      <field name="name">account.invoice.inherit.coop</field>
+      <field name="model">account.invoice</field>
+      <field name="inherit_id" ref="account.invoice_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//page[1]" position="before">
+          <page string="Cronograma">
+            <group>
+              <field name="amount_total"/>
+              <field name="dia_vencimiento" readonly="1"/>
+              <field name="num_cuotas"/>
+              <field name="interes"/>
+              <field name="cuota_mensual"/>
+
+              
+              <button name="calcula_cuotas" string="Calcular cuotas" type="object" class="oe_highlight"/>
+
+            </group>
+            <h3>Cronograma</h3>
+            <field name="cuotas" readonly="1">
+              <tree>
+                <field name="fecha_venc"/>
+                <field name="num_cuota"/>
+                <field name="interes"/>
+                <field name="monto_cuota"/>
+                <field name="monto_abonado"/>
+                <field name="estado"/>
+              </tree>
+            </field>
+          </page>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
